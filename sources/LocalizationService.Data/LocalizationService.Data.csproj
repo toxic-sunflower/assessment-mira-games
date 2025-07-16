@@ -22,7 +22,7 @@
     </ItemGroup>
 
     <ItemGroup>
-      <Folder Include="Read\Models\" />
+      <Folder Include="Read\Migrations\" />
     </ItemGroup>
 
 </Project>
