@@ -1,0 +1,42 @@
+@page "/languages"
+
+<h3 class="text-xl font-bold mb-4">Языки</h3>
+
+<button @onclick="OpenAddDialog" class="bg-blue-600 text-white px-4 py-2 rounded mb-4">
+    ➕ Добавить язык
+</button>
+
+@if (LanguagesList is null)
+{
+    <p>Загрузка...</p>
+}
+else
+{
+    <table class="w-full border text-left">
+        <thead>
+        <tr>
+            <th class="border p-2">ID</th>
+            <th class="border p-2">Код</th>
+            <th class="border p-2">Название</th>
+            <th class="border p-2">Действия</th>
+        </tr>
+        </thead>
+        <tbody>
+        @foreach (var lang in LanguagesList)
+        {
+            <tr>
+                <td class="border p-2">@lang.Id</td>
+                <td class="border p-2">@lang.Code</td>
+                <td class="border p-2">@lang.DisplayName</td>
+                <td class="border p-2 flex gap-2">
+                    <button @onclick="() => OpenEditDialog(lang)" class="text-blue-600">Изменить</button>
+                    <button @onclick="() => Delete(lang.Code)" class="text-red-600">Удалить</button>
+                </td>
+            </tr>
+        }
+        </tbody>
+    </table>
+}
+
+<AddLanguageDialog @ref="_addDialog" OnAdded="Reload" />
+<EditLanguageDialog @ref="_editDialog" OnSaved="Reload" />

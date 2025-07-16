@@ -1,0 +1,30 @@
+@if (Visible)
+{
+    <div class="fixed inset-0 bg-black bg-opacity-30 flex items-center justify-center">
+        <div class="bg-white p-6 rounded shadow-lg w-96">
+            <h4 class="mb-4 text-lg font-bold">Добавить язык</h4>
+
+            <EditForm Model="Model" OnValidSubmit="HandleValidSubmit">
+                <DataAnnotationsValidator />
+                <ValidationSummary />
+
+                <div class="mb-4">
+                    <label class="block mb-1">Код</label>
+                    <InputText @bind-Value="Model.Code" class="border p-2 w-full" />
+                    <ValidationMessage For="@(() => Model.Code)" />
+                </div>
+
+                <div class="mb-4">
+                    <label class="block mb-1">Название</label>
+                    <InputText @bind-Value="Model.DisplayName" class="border p-2 w-full" />
+                    <ValidationMessage For="@(() => Model.DisplayName)" />
+                </div>
+
+                <div class="mt-4 flex justify-end gap-2">
+                    <button type="button" @onclick="Close" class="px-4 py-2 bg-gray-300 rounded">Отмена</button>
+                    <button type="submit" class="px-4 py-2 bg-blue-600 text-white rounded">Добавить</button>
+                </div>
+            </EditForm>
+        </div>
+    </div>
+}
