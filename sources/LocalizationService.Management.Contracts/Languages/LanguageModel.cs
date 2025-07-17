@@ -4,7 +4,7 @@ public class LanguageModel
 {
     public LanguageModel() { }
     
-    public LanguageModel(long id, string code, string displayName) =>
+    public LanguageModel(long id, string code, string? displayName) =>
         (Id, Code, DisplayName) = (id, code, displayName);
     
     public long Id { get; set; }

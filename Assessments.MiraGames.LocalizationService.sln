@@ -4,7 +4,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "sources", "sources", "{D9B3
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LocalizationService.Domain", "sources\LocalizationService.Domain\LocalizationService.Domain.csproj", "{0A0C7352-984F-419E-B207-8E00FBF6A7FD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LocalizationService.Management", "sources\LocalizationService.Management\LocalizationService.Management.csproj", "{50A9EF83-A2E7-4B1A-9ADD-DCBE3578EAEC}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LocalizationService.Management.Api", "sources\LocalizationService.Management.Api\LocalizationService.Management.Api.csproj", "{50A9EF83-A2E7-4B1A-9ADD-DCBE3578EAEC}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LocalizationService.Data", "sources\LocalizationService.Data\LocalizationService.Data.csproj", "{36A958FD-156D-4409-932E-212B114EABB6}"
 EndProject
@@ -12,9 +12,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LocalizationService.Managem
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LocalizationService.Management.Contracts", "sources\LocalizationService.Management.Contracts\LocalizationService.Management.Contracts.csproj", "{F366F4B4-BF0F-4BDB-B323-03F05CB8508F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LocalizationService.Management.Client", "sources\LocalizationService.Management.Client\LocalizationService.Management.Client.csproj", "{237D3D57-EC67-492F-91E0-8D500A57A590}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LocalizationService.Api", "sources\LocalizationService.Api\LocalizationService.Api.csproj", "{49A0DF83-6316-47DE-8810-42E5A8E9C309}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LocalizationService.Shared.Contracts", "sources\LocalizationService.Shared.Contracts\LocalizationService.Shared.Contracts.csproj", "{015E0558-83AE-4529-B8AE-A1E62866CC7E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LocalizationService.Management", "sources\LocalizationService.Management\LocalizationService.Management.csproj", "{CEBA7A51-C6CB-46FF-A651-D77F25C45203}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,8 +29,9 @@ Global
 		{36A958FD-156D-4409-932E-212B114EABB6} = {D9B3BD48-D0FC-480E-893B-B3C999F4CF43}
 		{3B6F9E52-C5F9-46B5-83DF-81AADAF9A2B4} = {D9B3BD48-D0FC-480E-893B-B3C999F4CF43}
 		{F366F4B4-BF0F-4BDB-B323-03F05CB8508F} = {D9B3BD48-D0FC-480E-893B-B3C999F4CF43}
-		{237D3D57-EC67-492F-91E0-8D500A57A590} = {D9B3BD48-D0FC-480E-893B-B3C999F4CF43}
 		{49A0DF83-6316-47DE-8810-42E5A8E9C309} = {D9B3BD48-D0FC-480E-893B-B3C999F4CF43}
+		{015E0558-83AE-4529-B8AE-A1E62866CC7E} = {D9B3BD48-D0FC-480E-893B-B3C999F4CF43}
+		{CEBA7A51-C6CB-46FF-A651-D77F25C45203} = {D9B3BD48-D0FC-480E-893B-B3C999F4CF43}
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{0A0C7352-984F-419E-B207-8E00FBF6A7FD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -51,13 +54,17 @@ Global
 		{F366F4B4-BF0F-4BDB-B323-03F05CB8508F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F366F4B4-BF0F-4BDB-B323-03F05CB8508F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F366F4B4-BF0F-4BDB-B323-03F05CB8508F}.Release|Any CPU.Build.0 = Release|Any CPU
-		{237D3D57-EC67-492F-91E0-8D500A57A590}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{237D3D57-EC67-492F-91E0-8D500A57A590}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{237D3D57-EC67-492F-91E0-8D500A57A590}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{237D3D57-EC67-492F-91E0-8D500A57A590}.Release|Any CPU.Build.0 = Release|Any CPU
 		{49A0DF83-6316-47DE-8810-42E5A8E9C309}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{49A0DF83-6316-47DE-8810-42E5A8E9C309}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{49A0DF83-6316-47DE-8810-42E5A8E9C309}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{49A0DF83-6316-47DE-8810-42E5A8E9C309}.Release|Any CPU.Build.0 = Release|Any CPU
+		{015E0558-83AE-4529-B8AE-A1E62866CC7E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{015E0558-83AE-4529-B8AE-A1E62866CC7E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{015E0558-83AE-4529-B8AE-A1E62866CC7E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{015E0558-83AE-4529-B8AE-A1E62866CC7E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CEBA7A51-C6CB-46FF-A651-D77F25C45203}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CEBA7A51-C6CB-46FF-A651-D77F25C45203}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CEBA7A51-C6CB-46FF-A651-D77F25C45203}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CEBA7A51-C6CB-46FF-A651-D77F25C45203}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

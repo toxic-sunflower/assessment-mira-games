@@ -31,7 +31,7 @@ public partial class EditLanguageDialog : ComponentBase
     {
         await LanguageClient.UpdateLanguageAsync(
             Code,
-            new UpdateLanguageRequest(DisplayName), CancellationToken.None);
+            new RenameLanguageRequest(DisplayName), CancellationToken.None);
         await OnSaved.InvokeAsync();
         Visible = false;
     }

@@ -13,6 +13,7 @@
 
     <ItemGroup>
       <ProjectReference Include="..\LocalizationService.Data\LocalizationService.Data.csproj" />
+      <ProjectReference Include="..\LocalizationService.Shared.Contracts\LocalizationService.Shared.Contracts.csproj" />
     </ItemGroup>
 
 </Project>

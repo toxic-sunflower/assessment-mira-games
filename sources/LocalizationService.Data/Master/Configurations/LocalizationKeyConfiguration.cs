@@ -1,4 +1,5 @@
 using LocalizationService.Domain;
+using LocalizationService.Domain.Translations;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace LocalizationService.Data.Master.Configurations;

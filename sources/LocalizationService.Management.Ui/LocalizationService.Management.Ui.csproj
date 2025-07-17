@@ -12,7 +12,6 @@
     </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\LocalizationService.Management.Client\LocalizationService.Management.Client.csproj" />
       <ProjectReference Include="..\LocalizationService.Management.Contracts\LocalizationService.Management.Contracts.csproj" />
     </ItemGroup>
 
